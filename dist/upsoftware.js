@@ -1,18 +1,25 @@
-import { openBlock as _, createElementBlock as s, toDisplayString as r } from "vue";
-const a = (t, e) => {
-  const c = t.__vccOpts || t;
-  for (const [o, n] of e)
-    c[o] = n;
-  return c;
-}, p = { class: "btn-cta" }, u = {
+import { openBlock as _, createElementBlock as a, toDisplayString as r } from "vue";
+const p = (t, c) => {
+  const o = t.__vccOpts || t;
+  for (const [e, s] of c)
+    o[e] = s;
+  return o;
+}, l = { class: "btn-cta" }, u = {
   __name: "FccButton",
   props: {
     text: String
   },
   setup(t) {
-    return (e, c) => (_(), s("button", p, r(t.text), 1));
+    return (c, o) => (_(), a("button", l, r(t.text), 1));
   }
-}, i = /* @__PURE__ */ a(u, [["__scopeId", "data-v-8ca0b1b1"]]);
+}, i = /* @__PURE__ */ p(u, [["__scopeId", "data-v-8ca0b1b1"]]), n = {
+  FccButton: i
+}, b = (t) => {
+  Object.keys(n).forEach((c) => {
+    t.component(c, n[c]);
+  });
+}, x = { install: b };
 export {
-  i as FccButton
+  i as FccButton,
+  x as default
 };
