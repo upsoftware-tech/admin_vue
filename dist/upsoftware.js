@@ -3756,7 +3756,7 @@ const en = /* @__PURE__ */ ai(Bm);
 function Nm() {
   return Ke(xo);
 }
-function Hm(e, t = {}) {
+function zm(e, t = {}) {
   let r = (a) => a;
   const n = Nm();
   let o = en(typeof e == "object" ? e : data());
@@ -3808,6 +3808,12 @@ function Hm(e, t = {}) {
     }
   });
 }
+const Im = (e, t) => {
+  const r = e[t];
+  return r ? typeof r == "function" ? r() : Promise.resolve(r) : new Promise((n, o) => {
+    (typeof queueMicrotask == "function" ? queueMicrotask : setTimeout)(o.bind(null, new Error("Unknown variable dynamic import: " + t)));
+  });
+};
 /*!
   * vue-router v4.4.0
   * (c) 2024 Eduardo San Martin Morote
@@ -3828,23 +3834,23 @@ var nn;
 })(nn || (nn = {}));
 Symbol(process.env.NODE_ENV !== "production" ? "router view location matched" : "");
 Symbol(process.env.NODE_ENV !== "production" ? "router view depth" : "");
-const Im = Symbol(process.env.NODE_ENV !== "production" ? "router" : ""), Dm = Symbol(process.env.NODE_ENV !== "production" ? "route location" : "");
+const Dm = Symbol(process.env.NODE_ENV !== "production" ? "router" : ""), Lm = Symbol(process.env.NODE_ENV !== "production" ? "route location" : "");
 Symbol(process.env.NODE_ENV !== "production" ? "router view location" : "");
-function Lm() {
-  return Ke(Im);
-}
-function qm(e) {
+function qm() {
   return Ke(Dm);
 }
+function Um(e) {
+  return Ke(Lm);
+}
 const on = W({});
-function zm() {
+function Km() {
   pe(async () => {
     await t();
   });
-  const e = qm();
-  Lm();
+  const e = Um();
+  qm();
   const t = async () => {
-    const n = await import(`./../${e.meta.componentPath}`), o = [];
+    const r = e.meta.componentPath, n = await Im(/* @__PURE__ */ Object.assign({ "../App.vue": () => import("./App-9623d125.js") }), `../${r}.vue`), o = [];
     e.matched.map((s) => {
       s.meta.title && o.push({ path: s.path, title: s.meta.title });
     });
@@ -3865,16 +3871,16 @@ const an = {
   UsoftForm: Ro,
   UsoftFieldText: Sa,
   UsoftFieldPassword: Ea
-}, Um = (e) => {
+}, Vm = (e) => {
   Object.keys(an).forEach((t) => {
     e.component(t, an[t]);
   });
-}, Km = { install: Um };
+}, Gm = { install: Vm };
 export {
   Ea as UsoftFieldPassword,
   Sa as UsoftFieldText,
   Ro as UsoftForm,
-  Km as default,
-  Hm as useForm,
-  zm as useLayout
+  Gm as default,
+  zm as useForm,
+  Km as useLayout
 };

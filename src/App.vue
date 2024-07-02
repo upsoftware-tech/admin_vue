@@ -1,9 +1,9 @@
 <template>
 	<usoft-form>
-		formularz
+		<usoft-field-text label="Adres e-mail" />
 	</usoft-form>
 </template>
 
 <script setup>
-import {UsoftForm} from "./index.js";
+import {UsoftForm, UsoftFieldText} from "./index.js";
 </script>

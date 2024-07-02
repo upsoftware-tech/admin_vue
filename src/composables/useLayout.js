@@ -12,7 +12,7 @@ export default function() {
 	const router = useRouter();
 	const getOptions = async() => {
 		const path = route.meta.componentPath;
-		const module = await import(`./../${path}`);
+		const module = await import(`./../${path}.vue`);
 
 		const breadcrumbs = [];
 		route.matched.map((e) => {

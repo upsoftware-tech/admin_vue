@@ -5,6 +5,8 @@ import UsoftFieldPassword from "./components/Form/Field/Password.vue";
 import useForm from "./composables/useForm.js";
 import useLayout from "./composables/useLayout.js";
 
+import './styles/quasar.components.scss';
+
 const components = {
     UsoftForm,
     UsoftFieldText,
