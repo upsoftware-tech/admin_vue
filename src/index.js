@@ -1,5 +1,8 @@
 import UsoftForm from "./components/Form/Body.vue";
 
+import useForm from "./composables/useForm.js";
+import useLayout from "./composables/useLayout.js";
+
 const components = {
     UsoftForm
 };
@@ -11,4 +14,8 @@ const install = (app) => {
 };
 
 export default { install };
-export { UsoftForm };
+export {
+    UsoftForm,
+    useLayout,
+    useForm
+};
