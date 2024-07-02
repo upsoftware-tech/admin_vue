@@ -2,6 +2,7 @@ import { defineConfig } from "vite";
 import { resolve } from "path";
 import vue from "@vitejs/plugin-vue";
 import { quasar, transformAssetUrls } from '@quasar/vite-plugin'
+import path from 'path';
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -24,14 +25,7 @@ export default defineConfig({
 					vue: "Vue",
 				},
 				exports: 'named'
-			},
+			}
 		},
 	},
-	css: {
-		preprocessorOptions: {
-			scss: {
-				additionalData: `@import 'src/styles/admin/app.scss'; \n @import 'src/styles/quasar.components.scss'; \n`
-			}
-		}
-	}
 });

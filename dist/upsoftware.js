@@ -3892,7 +3892,8 @@ const tv = /* @__PURE__ */ rr(Hm, [["render", ev]]), ln = /* @__PURE__ */ Object
   UsoftFieldPassword: zm,
   UsoftFieldText: qm,
   UsoftForm: Jh
-}, Symbol.toStringTag, { value: "Module" })), rv = (e) => {
+}, Symbol.toStringTag, { value: "Module" }));
+const rv = (e) => {
   Object.keys(ln).forEach((t) => {
     const r = ln[t];
     e.component(r.name, r);
