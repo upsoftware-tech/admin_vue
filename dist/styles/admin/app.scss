@@ -120,4 +120,13 @@
 			}
 		}
 	}
+
+	&__field {
+		&__text {
+			.q-field__control {
+				height: 38px;
+				border-color: rgb(226, 232, 240);
+			}
+		}
+	}
 }

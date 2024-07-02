@@ -16,7 +16,7 @@
 				<div class="admin__app__content tw-mt-8">
 					<h2 class="intro-y tw-mt-0 tw-text-lg tw-font-medium"> ??? </h2>
 					<div class="tw-mt-5">
-						<router-view />
+						<slot />
 					</div>
 				</div>
 			</div>

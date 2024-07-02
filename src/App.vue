@@ -1,9 +1,13 @@
 <template>
-	<usoft-form>
-		<usoft-field-text label="Adres e-mail" />
-	</usoft-form>
+	<AdminLayout>
+		<usoft-form>
+			<usoft-box title="Podstawowe informacje">
+				<usoft-field-text admin label="Nazwa" />
+			</usoft-box>
+		</usoft-form>
+	</AdminLayout>
 </template>
 
 <script setup>
-import {UsoftForm, UsoftFieldText} from "./index.js";
+import {UsoftForm, UsoftFieldText, UsoftBox, AdminLayout} from "./index.js";
 </script>
