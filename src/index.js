@@ -1,10 +1,14 @@
 import UsoftForm from "./components/Form/Body.vue";
+import UsoftFieldText from "./components/Form/Field/Text.vue";
+import UsoftFieldPassword from "./components/Form/Field/Password.vue";
 
 import useForm from "./composables/useForm.js";
 import useLayout from "./composables/useLayout.js";
 
 const components = {
-    UsoftForm
+    UsoftForm,
+    UsoftFieldText,
+    UsoftFieldPassword
 };
 
 const install = (app) => {
@@ -16,6 +20,8 @@ const install = (app) => {
 export default { install };
 export {
     UsoftForm,
+    UsoftFieldText,
+    UsoftFieldPassword,
     useLayout,
     useForm
 };
