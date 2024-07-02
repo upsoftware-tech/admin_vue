@@ -16,7 +16,8 @@
   },
   "scripts": {
     "dev": "vite",
-    "build": "vite build && vue-tsc --emitDeclarationOnly",
+    "build": "vite build && npm run copy-vue-files",
+    "copy-vue-files": "cpx 'src/**/*.{vue,scss,css}' dist/",
     "types": "vue-tsc ",
     "preview": "vite preview"
   },
@@ -33,6 +34,7 @@
     "@quasar/vite-plugin": "^1.7.0",
     "@types/node": "^20.2.5",
     "@vitejs/plugin-vue": "^4.2.3",
+    "cpx": "^1.5.0",
     "sass": "^1.77.6",
     "typescript": "^5.0.2",
     "vite": "^4.3.9",

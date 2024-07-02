@@ -1,0 +1,123 @@
+.admin {
+	&__app {
+		background:#1e40af;
+		min-height:100vh;
+
+		&__content {
+			min-height: calc(100vh - 145px);
+		}
+
+		&__nav {
+			li {
+				position: relative;
+
+				&:after {
+					transition:all .2s ease;
+					content:'';
+					position: absolute;
+					inset:0;
+					background: rgba(#fff,.05);
+					border-radius:25px 0 0 25px;
+					opacity:0;
+				}
+
+				&:hover:after {
+					opacity:1;
+				}
+			}
+			a {
+				z-index:1;
+				position: relative;
+				display:flex;
+				height:50px;
+				align-items: center;
+				padding:0 20px;
+				border-radius:25px 0 0 25px;
+				color:rgba(#fff, .7);
+
+				span {
+					transition:all .2s ease;
+				}
+
+				&:hover {
+					span {
+						color:#fff;
+					}
+				}
+
+			}
+
+			.active {
+				a {
+					background:#f1f5f9;
+					color:blue;
+
+					&:hover {
+						span {
+							color:blue;
+						}
+					}
+				}
+			}
+		}
+	}
+
+	&__table {
+
+		.my-sticky-last-column-table {
+			height:calc(100vh - 230px);
+		}
+
+		tbody {
+			scroll-margin-top: 48px;
+		}
+
+		thead tr th {
+			position: sticky;
+			z-index: 100;
+		}
+
+		thead tr:last-child th {
+			top: 48px;
+		}
+		thead tr:first-child th {
+			top: 0;
+		}
+
+		.q-table--horizontal-separator thead th {
+			border-bottom-width: 2px;
+			border-bottom-color: rgb(229, 231, 235);
+			background-color: rgb(241, 245, 249);
+		}
+		.q-table th {
+			font-size: 14px;
+		}
+		.q-table tbody td {
+			min-height:48px;
+		}
+		.q-table td {
+			padding:2.5px 16px;
+		}
+		.q-table__card {
+			background: none;
+			color:rgba(71, 85, 105, 1);
+
+			.q-table tbody td {
+				border-bottom-color: rgb(229, 231, 235);
+			}
+
+			tr:nth-child(odd) td {
+				background-color: rgb(255, 255, 255);
+			}
+			tr:nth-child(even) td {
+				background-color: rgb(241, 245, 249);
+			}
+
+			td:last-child {
+				position: sticky;
+				right: 0;
+				z-index: 1;
+			}
+		}
+	}
+}
