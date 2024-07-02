@@ -26,5 +26,12 @@ export default defineConfig({
 				exports: 'named'
 			},
 		},
+	},
+	css: {
+		preprocessorOptions: {
+			scss: {
+				additionalData: `@import 'src/styles/admin/app.scss'; \n @import 'src/styles/quasar.components.scss'; \n`
+			}
+		}
 	}
 });

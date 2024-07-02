@@ -1,29 +1,14 @@
-import UsoftForm from "./components/Form/Body.vue";
-import UsoftFieldText from "./components/Form/Field/Text.vue";
-import UsoftFieldPassword from "./components/Form/Field/Password.vue";
-
 import useForm from "./composables/useForm.js";
 import useLayout from "./composables/useLayout.js";
-
-import './styles/quasar.components.scss';
-
-const components = {
-    UsoftForm,
-    UsoftFieldText,
-    UsoftFieldPassword
-};
+import * as components from './components';
 
 const install = (app) => {
-    Object.keys(components).forEach((name) => {
-        app.component(name, components[name]);
+    Object.keys(components).forEach((key) => {
+        const component = components[key];
+        app.component(component.name, component);
     });
 };
 
 export default { install };
-export {
-    UsoftForm,
-    UsoftFieldText,
-    UsoftFieldPassword,
-    useLayout,
-    useForm
-};
+export { useForm, useLayout };
+export * from './components';
