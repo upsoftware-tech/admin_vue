@@ -1,29 +1,28 @@
 import { defineConfig } from "vite";
 import { resolve } from "path";
 import vue from "@vitejs/plugin-vue";
+import { quasar, transformAssetUrls } from '@quasar/vite-plugin'
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  plugins: [vue()],
-  build: {
-    lib: {
-      // src/indext.ts is where we have exported the component(s)
-      entry: resolve(__dirname, "src/index.js"),
-      name: "UpSoftware",
-      // the name of the output files when the build is run
-      fileName: "upsoftware",
-    },
-    rollupOptions: {
-      // make sure to externalize deps that shouldn't be bundled
-      // into your library
-      external: ["vue"],
-      output: {
-        // Provide global variables to use in the UMD build
-        // for externalized deps
-        globals: {
-          vue: "Vue",
-        },
-      },
-    },
-  },
+	plugins: [
+		vue({
+		    template: { transformAssetUrls }
+	    })
+	],
+	build: {
+		lib: {
+			entry: resolve(__dirname, "src/index.js"),
+			name: "UpSoftware",
+			fileName: "upsoftware",
+		},
+		rollupOptions: {
+			external: ["vue"],
+			output: {
+				globals: {
+					vue: "Vue",
+				},
+			},
+		},
+	},
 });

@@ -1,7 +1,9 @@
 <template>
-	<FccButton text="ABC 123"></FccButton>
+	<usoft-form>
+		formularz
+	</usoft-form>
 </template>
 
 <script setup>
-import {FccButton} from "./index.js";
+import {UsoftForm} from "./index.js";
 </script>

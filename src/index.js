@@ -1,7 +1,7 @@
-import FccButton from "./components/FccButton.vue";
+import UsoftForm from "./components/Form/Body.vue";
 
 const components = {
-    FccButton
+    UsoftForm
 };
 
 const install = (app) => {
@@ -11,4 +11,4 @@ const install = (app) => {
 };
 
 export default { install };
-export { FccButton };
+export { UsoftForm };
