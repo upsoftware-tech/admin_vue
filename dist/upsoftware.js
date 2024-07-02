@@ -3961,7 +3961,8 @@ const og = /* @__PURE__ */ ar(rg, [["render", ng]]), ag = ["width", "height", "f
         e.title ? (Y(), re("div", Ag, [
           bn(Co(Cg), {
             class: "tw-mr-2",
-            size: "16"
+            size: "16",
+            weight: "regular"
           }),
           To(" " + vn(e.title), 1)
         ])) : yn("", !0),
