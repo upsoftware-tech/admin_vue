@@ -1,6 +1,18 @@
 import useForm from "./composables/useForm.js";
 import useLayout from "./composables/useLayout.js";
-import * as components from './components';
+import UsoftForm from "./components/Form/Body.vue";
+import UsoftFieldText from "./components/Form/Field/Text.vue";
+import UsoftFieldPassword from "./components/Form/Field/Password.vue";
+import UsoftBox from "./components/Box/index.vue";
+import AdminLayout from "./layouts/AdminLayout.vue";
+
+const components = [
+    AdminLayout,
+    UsoftForm,
+    UsoftFieldText,
+    UsoftFieldPassword,
+    UsoftBox
+]
 
 import './styles/quasar.components.scss';
 import './styles/admin/app.scss';
@@ -13,5 +25,4 @@ const install = (app) => {
 };
 
 export default { install };
-export { useForm, useLayout };
-export * from './components';
+export { useForm, useLayout, AdminLayout, UsoftForm, UsoftFieldText, UsoftFieldPassword, UsoftBox };
